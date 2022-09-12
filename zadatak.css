@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+.stranica {
+  display: flex;
+  flex-wrap: wrap;
+}
+.sekcija {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.naslov {
+  background-color: #ffcc00;
+  color: white;
+  height: 80px;
+}
+.tekst {
+  background-color: #cc0000;
+  color: white;
+  height: 200px;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: center;
+}
+.slike12,
+.slike34 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.slika {
+  height: 270px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slika img {
+  width: 320px;
+  display: block;
+  margin: auto;
+}
+.footer {
+  background-color: #ffcc00;
+  height: 100px;
+  color: black;
+  text-align: center;
+}
+/*dodatno*/
+.tekst a {
+  color: #000;
+  text-decoration: none;
+}
+
+/*Mobitel*/
+
+@media only screen and (max-width: 400px) {
+  .slika1,
+  .slika3 {
+    background-color: #000000;
+  }
+  .slika2,
+  .slika4 {
+    background-color: #1100cc;
+  }
+  .slika {
+    width: 100%;
+  }
+  .slika img {
+    width: 85%;
+  }
+}
+
+/*Tablet*/
+
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  .slike12,
+  .slike34 {
+    background-color: black;
+  }
+  .slika {
+    width: 50%;
+  }
+  .slika img {
+    width: 80%;
+  }
+  .naslov {
+    order: 0;
+  }
+  .slike12 {
+    order: 1;
+  }
+  .tekst {
+    order: 2;
+  }
+  .slike34 {
+    order: 3;
+  }
+  .footer {
+    order: 4;
+  }
+}
+
+/*Dekstop*/
+
+@media only screen and (min-width: 961px) {
+  .stranica {
+    width: 960px;
+    margin: 0px auto;
+  }
+  .slike12,
+  .slike34 {
+    background-color: black;
+  }
+  .slika {
+    flex-wrap: wrap;
+  }
+  .slika3 {
+    display: none;
+  }
+  .footer {
+    background-color: black;
+    color: white;
+  }
+  /* -------------- Dodatno -------------- */
+  .naslov:hover {
+    background-color: black;
+    color: #cc0000;
+    text-decoration: underline;
+    text-decoration-color: yellow;
+    text-underline-position: under;
+  }
+  .tekst:hover {
+    border: 8px solid black;
+  }
+  .tekst a:link {
+    cursor: pointer;
+  }
+  .slika img:hover {
+    filter: grayscale(0);
+    transform: scale(1.2);
+    border: 8px solid yellow;
+  }
+  .footer:hover {
+    opacity: 70%;
+    box-shadow: 0 5px 5px red;
+    font-weight: bolder;
+    font-size: 30px;
+    font-style: italic;
+    transition: 5s;
+  }
+}
